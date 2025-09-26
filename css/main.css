@@ -1,16 +1,27 @@
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  background-color: #f9f9f9;
+  color: #222;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
 }
 
@@ -22,6 +33,7 @@ h6 {
 
 img {
   width: 100%;
+  height: auto;
 }
 
 .main-nav ul {
@@ -39,9 +51,16 @@ img {
 
 .main-nav ul li a {
   display: block;
-  color: inherit;
+  color: #000;
   text-decoration: none;
   font-size: 1.25rem;
+  padding: 0.5rem;
+}
+
+.main-nav ul li a:focus,
+.main-nav ul li a:hover {
+  background-color: #333;
+  color: #fff;
 }
 
 form input,
@@ -50,6 +69,8 @@ form textarea {
   width: 100%;
   margin-bottom: 1rem;
   padding: .5rem 1rem;
+  border: 1px solid #444;
+  border-radius: 4px;
 }
 
 form textarea {
@@ -60,12 +81,23 @@ form textarea {
 }
 
 form button {
-  background: none;
-  border: 2px solid black;
+  background: #000;
+  color: #fff;
+  border: none;
   padding: 1rem;
   text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+form button:hover,
+form button:focus {
+  background: #444;
 }
 
 .site-footer {
   padding: 2rem 0;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
 }
